@@ -1,0 +1,70 @@
+.cs-icon_box_info {
+    height: 320px;
+}
+
+.link-logo-menu
+{
+    height: 200px !important;
+}
+
+.link-logo-menu1
+{
+    height: 150px !important;
+}
+
+.cs-main_header
+{
+    height: 140px !important;
+}
+
+.cs-hamburger
+{
+    color: #fff !important;
+}
+
+.cs-nav li
+{
+    color: #11114e !important;
+}
+
+.cs-nav a:hover
+{
+    color: #fff !important;
+}
+
+.icon-nav-menu,
+.close-menu-btn
+{
+    background-color: #11114e;
+}
+
+.close-menu-btn i
+{
+    color: #fff;
+}
+
+.icon-nav-menu:hover
+{
+    background-color: #fff;
+}
+
+.text-theme-color
+{
+    color: #11114e !important;
+}
+
+.event-date-class
+{
+    background-color: #f0f8ff;
+}
+
+.info-icon-about
+{
+    width: 40px;
+}
+
+@media screen and (max-width: 990px) {
+    .event-min-desc {
+      color: #fff!important;
+    }
+}
