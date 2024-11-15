@@ -60,9 +60,12 @@ class HomeController extends Controller
         $phone_number = $this->request->input('phone_number');
         $email_addr = $this->request->input('email_addr');
         $message_text = $this->request->input('message_text');
+        $subject = $this->request->input('subject');
 
         $mail = new Email;
-        $send = $mail->sendContactMessage($name, $email_addr, $phone_number, $message_text);
+        $send = $mail->sendContactMessage($name, $email_addr, $phone_number, $message_text, $subject);
+
+        //dd($send);
 
         if($send == true) {
             return response()->json([

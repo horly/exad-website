@@ -15,7 +15,7 @@
           {{ config('app.name') }} {{ __('home.your_trusted_partner') }}
         </div>
         <div class="cs-hero_btns">
-          <a href="#" class="cs-btn cs-style2 cs-btn_lg cs-accent_bg_2 cs-medium rounded-0 cs-primary_font">
+          <a href="{{ route('app_about_us') }}" class="cs-btn cs-style2 cs-btn_lg cs-accent_bg_2 cs-medium rounded-0 cs-primary_font">
             {{ __('home.about_us') }}
           </a>
         </div>

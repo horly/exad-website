@@ -28,7 +28,7 @@
         <div class="cs-preloader cs-accent_color cs-white_bg">
             <div class="cs-preloader_bg cs-center cs-accent_7_bg_2">
             <div class="cs-preloader_in cs-accent_15_border">
-                <img src="{{ asset('assets/img/creative-agency/new-logo-exad.png') }}" alt="Logo">
+                <img src="{{ asset('assets/logo/exad-1200x1200.png') }}" alt="Logo">
             </div>
             </div>
         </div>

@@ -144,4 +144,8 @@ return [
     'we_take_reasonable' => "Nous prenons des mesures de sécurité raisonnables pour protéger vos informations contre l'accès non autorisé, l'utilisation ou la divulgation",
     'if_you_have_any_questions_about' => "Si vous avez des questions sur cette politique de confidentialité, veuillez nous contacter à ",
 
+
+    'subject' => "Sujet",
+    'enter_your_subject' => "Entrez votre sujet",
+    'please_enter_your_subject' => "Veuillez entrer votre sujet",
 ];

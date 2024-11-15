@@ -79,6 +79,7 @@
 
         <div class="cs-height_80 cs-height_lg_60"></div>
 
+        {{--
         <h3 class="cs-bold">{{ __('home.our_head_office') }}</h3>
         <p><b>{{ config('app.name') }}</b>, {{ __('home.congolese_company_registered_under') }} : </p>
         <ul>
@@ -92,6 +93,7 @@
                 </ul>
             </li>
         </ul>
+        --}}
 
         <div class="cs-contact_info_wrap">
             <h4 class="cs-contact_title cs-semi_bold">{{ __('home.contact_information') }} </h4>

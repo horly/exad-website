@@ -25,13 +25,15 @@ class Email
 
         $this->mail = new PHPMailer;
         $this->mail->isSMTP();
-        $this->mail->SMTPDebug = 2; //pas d'afficahe de debug mais si nous voulons afficher les erreurs il faut le mettre à 2
-        $this->mail->Port = config('app.mail_port'); //465
+        $this->mail->SMTPDebug = 0; //pas d'afficahe de debug mais si nous voulons afficher les erreurs il faut le mettre à 2
+        $this->mail->Port = config('app.mail_port'); //587
         $this->mail->Host = config('app.mail_host'); //https://mail17.lwspanel.com
         $this->mail->SMTPAuth = true;
         $this->mail->Username = config('app.mail_username'); //webmaster@exadgroup.org
         $this->mail->Password = config('app.mail_password'); //hG9-vTunHvb3a5U
         $this->mail->CharSet  = "UTF-8";
+        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+
     }
 
     //pour l'envoie du mail
@@ -58,14 +60,14 @@ class Email
         }*/
     }
 
-    public function sendContactMessage($fullname, $email_addr, $phoneNumber, $message_text)
+    public function sendContactMessage($fullname, $email_addr, $phoneNumber, $message_text, $subject)
     {
         $email = $email_addr;
         $name = $fullname;
         $phone_number = $phoneNumber;
         $message = $message_text;
 
-        $subject = __('home.information');
+        //$subject = __('home.information');
         $messageHtml = view('email.message-email')
                     ->with([
                         'name' => $name,

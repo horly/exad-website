@@ -4,7 +4,7 @@
       <div class="container">
         <div class="cs-main_header_in">
           <div class="cs-main_header_left">
-            <a class="cs-site_branding" href="{{ route('app_home') }}"><img src="{{ asset('assets/img/creative-agency/new-logo-exad-white.png') }}" class="link-logo-menu1"  alt="Logo"></a>
+            <a class="cs-site_branding" href="{{ route('app_home') }}"><img src="{{ asset('assets/logo/exad-1200x1200-white.png') }}" class="link-logo-menu1"  alt="Logo"></a>
           </div>
           <div class="cs-main_header_right">
             <div class="cs-hamburger_wrap cs-white">
@@ -18,7 +18,7 @@
               <button class="cs-nav_cross close-menu-btn"><i class="fas fa-times"></i></button>
               <div class="cs-nav_out cs-accent_bg cs-white bg-white">
                 <div class="cs-nav_in">
-                  <a class="cs-site_branding" href="{{ route('app_home') }}"><img class="link-logo-menu" src="{{ asset('assets/img/creative-agency/new-logo-exad.png') }}" alt="Logo"></a>
+                  <a class="cs-site_branding" href="{{ route('app_home') }}"><img class="link-logo-menu" src="{{ asset('assets/logo/exad-1200x1200.png') }}" alt="Logo"></a>
                   <div class="cs-nav">
                     <ul class="cs-nav_list">
                         <li class="@if (Request::route()->getName() == "app_home") current-menu-item @endif">

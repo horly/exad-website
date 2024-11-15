@@ -7,7 +7,7 @@
       <div class="col-xl-7 col-lg-6">
         <div class="cs-cta cs-style6">
             <div>
-                <a class="cs-site_branding" href="{{ route('app_home') }}"><img src="{{ asset('assets/img/creative-agency/new-logo-exad-white.png') }}" class="link-logo-menu1"  alt="Logo"></a>
+                <a class="cs-site_branding" href="{{ route('app_home') }}"><img src="{{ asset('assets/logo/exad-1200x1200-white.png') }}" class="link-logo-menu1"  alt="Logo"></a>
             </div>
                 @if (Config::get('app.locale') == 'en')
                     <a href="{{ route('app_language', ['lang' => 'fr']) }}" class="cs-btn cs-style2 cs-accent_bg cs-medium rounded-0 cs-primary_font">

@@ -31,5 +31,5 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/about_us', 'about_us')->name('app_about_us');
     Route::get('/services', 'services')->name('app_services');
     Route::get('/privacy_policy', 'privacyPolicy')->name('app_privacy_policy');
-    Route::match(['get', 'post'], '/send-message', 'sendMessage')->name('app_send_message');
+    Route::post('/send-message', 'sendMessage')->name('app_send_message');
 });

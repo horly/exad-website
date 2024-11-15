@@ -17,12 +17,14 @@ $('#send-message').click(function(){
     var phone_number = $('#phone_number');
     var email_addr = $('#email_addr');
     var message_text = $('#message_text');
+    var subject = $('#subject');
 
     var first_name_error = $('#first_name-error');
     var last_name_error = $('#last_name-error');
     var phone_number_error = $('#phone_number-error');
     var email_addr_error = $('#email_addr-error');
     var message_text_error = $('#message_text-error');
+    var subject_error = $('#subject-error');
 
     var form = $('#send-message-form');
     var token = $('#send-message-token');
@@ -43,43 +45,53 @@ $('#send-message').click(function(){
                     email_addr.removeClass('is-invalid');
                     email_addr_error.text("");
 
-                    if(message_text.val() != "") {
-                        message_text.removeClass('is-invalid');
-                        message_text_error.text("");
+                    if(subject.val() != "") {
+                        subject.removeClass('is-invalid');
+                        subject_error.text("");
 
-                        $('#send-message').addClass('d-none');
-                        $('#send-message-loading').removeClass('d-none');
+                        if(message_text.val() != "") {
+                            message_text.removeClass('is-invalid');
+                            message_text_error.text("");
 
-                        $.ajax({
-                            type: 'post',
-                            url: form.attr('action'),
-                            data: {
-                                '_token': token.val(),
-                                'name': first_name.val() + ' ' + last_name.val(),
-                                'phone_number': phone_number.val(),
-                                'email_addr': email_addr.val(),
-                                'message_text': message_text.val()
-                            },
-                            success:function(response) {
+                            $('#send-message').addClass('d-none');
+                            $('#send-message-loading').removeClass('d-none');
 
-                                console.log(response);
-                                $('#send-message').removeClass('d-none');
-                                $('#send-message-loading').addClass('d-none');
+                            $.ajax({
+                                type: 'post',
+                                url: form.attr('action'),
+                                data: {
+                                    '_token': token.val(),
+                                    'name': first_name.val() + ' ' + last_name.val(),
+                                    'phone_number': phone_number.val(),
+                                    'subject': subject.val(),
+                                    'email_addr': email_addr.val(),
+                                    'message_text': message_text.val()
+                                },
+                                success:function(response) {
 
-                                if(response.status == "success") {
-                                    $('.alert-success').removeClass('d-none');
-                                    $('.alert-danger').addClass('d-none');
-                                    document.getElementById('send-message-form').reset();
-                                } else {
-                                    $('.alert-success').addClass('d-none');
-                                    $('.alert-danger').removeClass('d-none');
+                                    //console.log(response);
+
+                                    $('#send-message').removeClass('d-none');
+                                    $('#send-message-loading').addClass('d-none');
+
+                                    if(response.status == "success") {
+                                        $('.alert-success').removeClass('d-none');
+                                        $('.alert-danger').addClass('d-none');
+                                        document.getElementById('send-message-form').reset();
+                                    } else {
+                                        $('.alert-success').addClass('d-none');
+                                        $('.alert-danger').removeClass('d-none');
+                                    }
                                 }
-                            }
-                        });
+                            });
 
-                    } else {
-                        message_text.addClass('is-invalid');
-                        message_text_error.text(message_text_error.attr('message'));
+                        } else {
+                            message_text.addClass('is-invalid');
+                            message_text_error.text(message_text_error.attr('message'));
+                        }
+                    }else {
+                        subject_error.addClass('is-invalid');
+                        subject_error.text(subject_error.attr('message'));
                     }
                 } else {
                     email_addr.addClass('is-invalid');

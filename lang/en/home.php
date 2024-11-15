@@ -142,4 +142,8 @@ return [
     'security_of_your_information' => "Security of your information",
     'we_take_reasonable' => "We take reasonable security measures to protect your information from unauthorized access, use or disclosure",
     'if_you_have_any_questions_about' => "If you have any questions about this privacy policy, please contact us at",
+
+    'subject' => "Subject",
+    'enter_your_subject' => "Enter your subject",
+    'please_enter_your_subject' => "Please enter your subject",
 ];

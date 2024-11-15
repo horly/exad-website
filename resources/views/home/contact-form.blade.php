@@ -61,6 +61,13 @@
                   <small class="text-danger" id="email_addr-error" message="{{ __('home.please_enter_a_valid_email_address') }}"></small>
                   <div class="cs-height_20 cs-height_lg_20"></div>
               </div>
+
+              <div class="col-md-12">
+                <input type="text" class="cs-form_field cs-white_bg cs-accent_30_border cs-primary_color" name="subject" id="subject" placeholder="{{ __('home.subject') }}">
+                <small class="text-danger" id="subject-error" message="{{ __('home.please_enter_your_subject') }}"></small>
+                <div class="cs-height_20 cs-height_lg_20"></div>
+              </div>
+
               <div class="col-lg-12">
                   <textarea cols="30" rows="5" class="cs-form_field cs-white_bg cs-accent_30_border cs-primary_color" id="message_text" placeholder="{{ __('home.your_message') }}"></textarea>
                   <small class="text-danger" id="message_text-error" message="{{ __('home.please_enter_your_message') }}"></small>
