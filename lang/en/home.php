@@ -146,4 +146,6 @@ return [
     'subject' => "Subject",
     'enter_your_subject' => "Enter your subject",
     'please_enter_your_subject' => "Please enter your subject",
+
+    'from' => "From",
 ];

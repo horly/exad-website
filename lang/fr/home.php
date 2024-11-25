@@ -148,4 +148,6 @@ return [
     'subject' => "Sujet",
     'enter_your_subject' => "Entrez votre sujet",
     'please_enter_your_subject' => "Veuillez entrer votre sujet",
+
+    'from' => "De",
 ];
